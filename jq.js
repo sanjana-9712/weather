@@ -16,9 +16,9 @@ $(document).ready(function($) {
     var arr_conditions = new Array(4);
     var arr_maxtemp = new Array(4);
     var arr_mintemp = new Array(4);  
-    var arr_hum = new Array(4);
-    var arr_wind = new Array(4);
-    var arr_windir = new Array(4);
+    //var arr_hum = new Array(4);
+    // var arr_wind = new Array(4);
+    // var arr_windir = new Array(4);
     var arr_prec = new Array(4);
     //var date57 = parsed_json['forecast']['simpleforecast']['forecastday'][1]['date']['day'];
     //document.getElementById("date2").innerHTML = date57;
@@ -43,15 +43,15 @@ $(document).ready(function($) {
     for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
         arr_mintemp[i] = parsed_json.forecast.simpleforecast.forecastday[i].low.celsius ;
     }
-    for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
-      arr_hum[i] = parsed_json.forecast.simpleforecast.forecastday[i].avehumidity ;
-    }
-    for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
-      arr_wind[i] = parsed_json.forecast.simpleforecast.forecastday[i].avewind.kph ;
-    }
-    for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
-      arr_windir[i] = parsed_json.forecast.simpleforecast.forecastday[i].avewind.dir ;
-    }
+    // for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
+    //   arr_hum[i] = parsed_json.forecast.simpleforecast.forecastday[i].avehumidity ;
+    // }
+    // for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
+    //   arr_wind[i] = parsed_json.forecast.simpleforecast.forecastday[i].avewind.kph ;
+    // }
+    // for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
+    //   arr_windir[i] = parsed_json.forecast.simpleforecast.forecastday[i].avewind.dir ;
+    // }
     for(i = 0; i< parsed_json.forecast.simpleforecast.forecastday.length; i++){
       arr_prec[i] = parsed_json.forecast.simpleforecast.forecastday[i].qpf_allday.mm ;
     }
@@ -81,15 +81,15 @@ $(document).ready(function($) {
     document.getElementById("mint3").innerHTML = "Min Temperature : " + arr_mintemp[2] + "&#8451";
     document.getElementById("mint4").innerHTML = "Min Temperature : " + arr_mintemp[3] + "&#8451";
 
-    document.getElementById("hum1").innerHTML = "Average humidity : " + arr_hum[0];
-    document.getElementById("hum2").innerHTML = "Average humidity : " + arr_hum[1];
-    document.getElementById("hum3").innerHTML = "Average humidity : " + arr_hum[2];
-    document.getElementById("hum4").innerHTML = "Average humidity : " + arr_hum[3];
+    // document.getElementById("hum1").innerHTML = "Average humidity : " + arr_hum[0];
+    // document.getElementById("hum2").innerHTML = "Average humidity : " + arr_hum[1];
+    // document.getElementById("hum3").innerHTML = "Average humidity : " + arr_hum[2];
+    // document.getElementById("hum4").innerHTML = "Average humidity : " + arr_hum[3];
 
-    document.getElementById("wind1").innerHTML = "Average wind speed : " + arr_wind[0] + "kph " + arr_windir[0] ;
-    document.getElementById("wind2").innerHTML = "Average wind speed : " + arr_wind[1] + "kph " + arr_windir[1] ;
-    document.getElementById("wind3").innerHTML = "Average wind speed : " + arr_wind[2] + "kph " + arr_windir[2] ;
-    document.getElementById("wind4").innerHTML = "Average wind speed : " + arr_wind[3] + "kph " + arr_windir[3] ;
+    // document.getElementById("wind1").innerHTML = "Average wind speed : " + arr_wind[0] + "kph " + arr_windir[0] ;
+    // document.getElementById("wind2").innerHTML = "Average wind speed : " + arr_wind[1] + "kph " + arr_windir[1] ;
+    // document.getElementById("wind3").innerHTML = "Average wind speed : " + arr_wind[2] + "kph " + arr_windir[2] ;
+    // document.getElementById("wind4").innerHTML = "Average wind speed : " + arr_wind[3] + "kph " + arr_windir[3] ;
 
     document.getElementById("prec1").innerHTML = "QPF : " + arr_prec[0] + " mm";
     document.getElementById("prec2").innerHTML = "QPF : " + arr_prec[1] + " mm";
