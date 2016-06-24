@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Centre Of Atmospheric Sciences, IIT Delhi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	   padding:0px;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    /*.row.content {height: 500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      margin-right: 0px;
+      padding-top: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      background-color: #f1f1f1;
+      height: 100vh;
+		  width:30%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding:5px;
+	   z-index: -1; position:relative;
+    }
+
+    /* iframe itself */
+    div#root > iframe {
+      width:100%;
+      height: 90vh;
+      margin-left:0px;
+      allowfullscreen:yes;
+      margin-top:5px;
+      margin-left:-7px;
+      margin-right:-7px;
+      frameborder:0;
+      margin-bottom:0px;
+      scrolling:no;
+      visibility:visible;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {
+        height:auto;
+        padding-right: 0px;
+      }
+    }
+    .well{
+      padding: 0px;
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <h2 style="color:white;"> <center>Centre Of Atmospheric Sciences </center></h2>
+    </div>
+  </nav>
+    
+  <div class="container-fluid text-center" style="padding-right:0px">
+    <div class="row content" style="padding-right:0px">  	  
+      <div class="col-sm-8 col-lg-8 col-xs-8 text-left" id="root" >
+        <iframe  id="ima"></iframe>
+      </div>
+      <div class="col-sm-4 col-lg-4 sidenav" >
+        <div class="well">
+          <b><p id="date1"></p></b>
+  		    <p id="loc"><center> </center></p>
+  		    <p><span>
+  	        <img src="" id="img1" alt=""> 
+  				</span><span style="color:#f1f1f1">kjhf</span><span id="ctemp"></span></p>
+  				<p id="cond"></p>
+  				<p id="prec"></p>
+        </div>
+        <div class="well">
+         <canvas id="graph" width="300" height="200"></canvas> 
+        </div>
+        <div class="well">
+          <div class="row">
+            <div class="col-sm-4 col-lg-4">
+              <b> <p id="date2"></p> </b>              
+              <img src="" id="imag2" alt="Loading..">   
+              <p id="cond2"></p> 
+              <p><span id="maxt2" style="font-size:25px"></span><span style="color:#f1f1f1">kjhf</span><span id="mint2" style="font-size:15px"></span></p>  
+              <p id="prec2"><center> </center></p>
+            </div>
+            <div class="col-sm-4 col-lg-4">
+              <b> <p id="date3"></p> </b>
+              <img src="" id="imag3" alt="Loading..">
+              <p id="cond3"></p>
+              <p><span id="maxt3" style="font-size:25px"></span><span style="color:#f1f1f1">kjhf</span><span id="mint3" style="font-size:15px"></span></p>
+              <p id="prec3"></p>
+            </div>
+            <div class="col-sm-4 col-lg-4">
+              <b> <p id="date4"></p> </b>
+              <img src="" id="imag4" alt="Loading..">
+              <p id="cond4"></p>
+              <p><span id="maxt4" style="font-size:25px"></span><span style="color:#f1f1f1">kjhf</span><span id="mint4" style="font-size:15px"></span></p>
+              <p id="prec4"></p>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>Courtesy: Weather Underground</p>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="fore.js"></script> 
+  <script type='text/javascript' src="a1.js"></script> 
+  <script type='text/javascript' src="a2.js"></script> 
+  <script type='text/javascript' src="a3.js"></script> 
+</body>
+</html>
+
